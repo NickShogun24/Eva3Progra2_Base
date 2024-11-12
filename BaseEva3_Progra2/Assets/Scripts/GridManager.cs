@@ -77,6 +77,20 @@ public class GridManager : MonoBehaviour
                 gridPiece_WallDestructible.CreateWall(wallDestructiblePref);
                 piece = gridPiece_WallDestructible;
                 break;
+            case GridPieceType.Floor_L:
+                GridPiece_Floor gridPiece_Floor_L = pieceObj.GetComponent<GridPiece_Floor>();
+                gridPiece_Floor_L.isWalkable = true;
+                gridPiece_Floor_L.isEmpty=true;
+                piece = gridPiece_Floor_L;
+                break;
+                case GridPieceType.Heal_Floor:
+                GridPiece_Heal_Floor gridPiece_Heal_Floor = pieceObj.GetComponent<GridPiece_Heal_Floor>();
+                gridPiece_Heal_Floor.isWalkable = true;
+                gridPiece_Heal_Floor.isEmpty=true;
+                piece = gridPiece_Heal_Floor;
+                break;
+                
+
         }
 
         return piece;   
@@ -86,7 +100,7 @@ public class GridManager : MonoBehaviour
     GridPieceType GetPieceType(Vector2Int pos)
     {
         GridPieceType gridPieceType = GridPieceType.Empty;
-        if(pos.x == 0 || pos.x == gridSize.x-1 || pos.y == 0 || pos.y == gridSize.y-1)
+        if (pos.x == 0 || pos.x == gridSize.x - 1 || pos.y == 0 || pos.y == gridSize.y - 1)
         {
             gridPieceType = GridPieceType.Wall;
         }
@@ -94,6 +108,15 @@ public class GridManager : MonoBehaviour
         {
             gridPieceType = GridPieceType.DestructibleWall;
         }
+        else if (pos.x == 3 && pos.y == 3)
+        {
+            gridPieceType = GridPieceType.Floor_L;
+        }
+        else if (pos.x == 4 && pos.y == 4)
+        {
+            gridPieceType = GridPieceType.Heal_Floor;
+        }
+            
         return gridPieceType;
     }
 
