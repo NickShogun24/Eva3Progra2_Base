@@ -12,5 +12,6 @@ public enum EntityType
 { 
     Player,
     Bullet,
+    Ghost,
 }
 
