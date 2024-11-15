@@ -157,7 +157,7 @@ MonoBehaviour:
   - {fileID: 1018440231605446837, guid: 4e2664141f252c7498208cffe2105c87, type: 3}
   - {fileID: 2439647441270201524, guid: 1f9020c71b0a8f542befc1fa5683a44c, type: 3}
   - {fileID: 8095340685251639064, guid: 60a1ffdafe4b27b46a103b0843211342, type: 3}
-  gridSize: {x: 10, y: 10}
+  gridSize: {x: 20, y: 20}
   parent: {fileID: 863806968}
   wallPref: {fileID: 1744140219005918704, guid: 16608fe5f0d1848429d3a15335775c49, type: 3}
   wallDestructiblePref: {fileID: 1744140219005918704, guid: 53914c0aa552e274b82143830c478cf5, type: 3}
@@ -428,7 +428,9 @@ MonoBehaviour:
   - {x: 2, y: 4}
   - {x: 3, y: 6}
   - {x: 9, y: 1}
-  - {x: 8, y: 8}
+  - {x: 15, y: 16}
+  - {x: 10, y: 12}
+  - {x: 12, y: 8}
   prefabGhost: {fileID: 1876160764}
 --- !u!4 &1001827678
 Transform:

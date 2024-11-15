@@ -108,7 +108,27 @@ public class GridManager : MonoBehaviour
         {
             gridPieceType = GridPieceType.DestructibleWall;
         }
-        else if (pos.x == 3 && pos.y == 3)
+        else if (pos.x == 6 && pos.y == 3)
+        {
+            gridPieceType = GridPieceType.Floor_L;
+        }
+        else if (pos.x == 11 && pos.y == 9)
+        {
+            gridPieceType = GridPieceType.Floor_L;
+        }
+        else if (pos.x == 15 && pos.y ==15)
+        {
+            gridPieceType = GridPieceType.Floor_L;
+        }
+        else if (pos.x == 6 && pos.y == 12)
+        {
+            gridPieceType = GridPieceType.Floor_L;
+        }
+        else if (pos.x == 9 && pos.y == 5)
+        {
+            gridPieceType = GridPieceType.Floor_L;
+        }
+        else if (pos.x == 4 && pos.y == 3)
         {
             gridPieceType = GridPieceType.Floor_L;
         }
