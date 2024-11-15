@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GridEntity_Movible_Ghost : GridEntity_Movible
 {
-    public GridManager gManager;
+    
     // Start is called before the first frame update
     void Start()
     {
-        gManager = GetComponent<GridManager>();
+        
         
     }
     protected override void Awake2()

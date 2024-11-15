@@ -21,12 +21,12 @@ public class EnemySpawner : MonoBehaviour
     {
         
     }
-    public void InstanciarFantasmas(/*Vector2Int pos*/)
+    public void InstanciarFantasmas()
     {
         Vector2Int pos = positions[Random.Range(0,positions.Length)];
-        GameObject ghost = Instantiate(prefabGhost);
+        GameObject ghost = Instantiate(prefabGhost, new Vector3(pos.x, .5f, pos.y), Quaternion.identity);
         GridEntity ghostEntity = ghost.GetComponent<GridEntity>();
-        GridPiece piece = gridManager.GetGridPiece(pos);
-        piece.OnEntityEnter(ghostEntity);
+        //GridPiece piece = gridManager.GetGridPiece(pos);
+        //piece.OnEntityEnter(ghostEntity);
     }
 }
